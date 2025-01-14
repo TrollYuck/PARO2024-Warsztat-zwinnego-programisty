@@ -1,0 +1,47 @@
+Scenario 1:
+    As a player, I can roll the dice and move my pice.
+
+Scenario 2:
+    As a player, I can roll the dice, move my pice and
+    buy properties when I land on them.
+
+Scenario 3:
+    As a player, I can I can roll the dice, move my pice and
+    pay rent when I land on another player's property.
+
+Scenario 4:
+    As a player, I can I can roll the dice, move my pice and
+    I can draw a Chance or Community Chest card when I land on the respective spaces.
+
+Test 1:
+    GIVEN it is a player's turn, WHEN the player rolls the dice,
+    THEN the player's token should move the number of spaces indicated by the dice roll.
+
+Test 2:
+    GIVEN it is a player's turn, 
+    WHEN [the player rolls the dice, 
+    AND the player's token moves the number of spaces indicated by the dice roll, 
+    AND the player lands on an unowned property, 
+    THEN the player should have the option to buy the property, 
+    AND if the player chooses to buy the property], 
+    THEN the property should be marked as owned by the player, 
+    AND the player's balance should decrease by the property's cost.
+    
+
+Test 3
+    GIVEN it is a player's turn,
+    WHEN the player rolls the dice,
+    AND the player's token moves the number of spaces indicated by the dice roll,
+    AND the player lands on a property owned by another player,
+    THEN
+    the player's balance should decrease by the rent amount for that property,
+    AND the balance of the owner of the property should increase by the same rent amount.
+    AND the property ownership should remain unchanged.
+
+Test 4:
+    GIVEN it is a player's turn, 
+    WHEN the player rolls the dice, 
+    AND the player's token moves the number of spaces indicated by the dice roll, 
+    AND the player lands on a Chance or Community Chest space, 
+    THEN the player should draw a Chance or Community Chest card, 
+    AND the player should follow the instructions on the card.
